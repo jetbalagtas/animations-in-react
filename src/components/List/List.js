@@ -8,19 +8,15 @@ class List extends Component {
   }
 
   addItemHandler = () => {
-    this.setState((prevState) => {
-      return {
+    this.setState((prevState) => ({
         items: prevState.items.concat(prevState.items.length + 1)
-      };
-    });
+      }));
   }
 
   removeItemHandler = (selIndex) => {
-    this.setState((prevState) => {
-      return {
+    this.setState((prevState) => ({
         items: prevState.items.filter((item, index) => index !== selIndex)
-      };
-    });
+      }));
   }
 
   render () {
